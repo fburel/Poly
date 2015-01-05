@@ -28,25 +28,18 @@
     [super tearDown];
 }
 
-- (void) testExample
-{
-    int a = 2;
-    int b = 2;
-    XCTAssert(a == b); // fail si a != b
-}
-
 /// Un polygone ne peut pas avoir moins de 3 coté
 - (void) test_PolygoneEdgesStayAbove3
 {
-    Polygone * p = [[Polygone alloc]init];
+    Polygone * p = [Polygone new];
     
     int initialNumber = 10;
     int offLimitValue = 2;
     
-    [p setEdges:initialNumber];
-    [p setEdges:offLimitValue];
+    p.edges = initialNumber;
+    p.edges = offLimitValue;
     
-    XCTAssert([p edges] == initialNumber);
+    XCTAssert(p.edges == initialNumber);
 }
 
 
@@ -58,18 +51,18 @@
     int initialNumber = 10;
     int offLimitValue = 13;
     
-    [p setEdges:initialNumber];
-    [p setEdges:offLimitValue];
+    p.edges = initialNumber;
+    p.edges = offLimitValue;
     
-    XCTAssert([p edges] == initialNumber);
+    XCTAssert(p.edges == initialNumber);
 }
 
 /// Par defaut un polygone a 5 cotés
 - (void) test_PolygoneIsCreatedWith5Edges
 {
-    Polygone * p = [[Polygone alloc]init];
+    Polygone * p = [Polygone new];
     
-    XCTAssert([p edges] == 5);
+    XCTAssert(p.edges == 5);
 }
 
 

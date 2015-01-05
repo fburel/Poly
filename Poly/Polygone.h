@@ -11,8 +11,7 @@
 @interface Polygone : NSObject
 
 /// Accessor for the number of edges
-- (void) setEdges:(int)edges;
-- (int) edges;
+@property (nonatomic) int edges;
 
 /// Returns the name of the receiver
 - (NSString *) name;

@@ -16,9 +16,7 @@
 
 
 @implementation Polygone
-{
-    int _edges;
-}
+
 
 - (instancetype)init
 {
@@ -41,11 +39,6 @@
         _edges = edges;
     }
     
-}
-
-- (int)edges
-{
-    return _edges;
 }
 
 - (NSString *)name
