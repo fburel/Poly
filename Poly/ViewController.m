@@ -8,12 +8,14 @@
 
 #import "ViewController.h"
 #import "Polygone.h"
+#import "PolygoneDrawer.h"
 
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *polygoneNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *polygoneDescriptionLabel;
 @property (weak, nonatomic) IBOutlet UISlider *slider;
+@property (weak, nonatomic) IBOutlet PolygoneDrawer *drawer;
 
 
 @property (nonatomic, /*readwrite, */strong) Polygone * polygone;
@@ -27,6 +29,7 @@
     self.polygoneNameLabel.text = self.polygone.name;
     self.polygoneDescriptionLabel.text = [NSString stringWithFormat:@"Ce polygone à %d cotés", self.polygone.edges];
     
+    self.drawer.edges = self.polygone.edges;
 }
 
 - (void)viewDidLoad {

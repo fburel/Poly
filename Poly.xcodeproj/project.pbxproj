@@ -15,6 +15,7 @@
 		0CACFD371A5AA2DB0080FB39 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CACFD351A5AA2DB0080FB39 /* LaunchScreen.xib */; };
 		0CACFD431A5AA2DB0080FB39 /* PolyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CACFD421A5AA2DB0080FB39 /* PolyTests.m */; };
 		0CD1C1BB1A5ADBF500416EED /* Polygone.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD1C1BA1A5ADBF500416EED /* Polygone.m */; };
+		0CD1C1BE1A5C08D500416EED /* PolygoneDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD1C1BD1A5C08D500416EED /* PolygoneDrawer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		0CACFD421A5AA2DB0080FB39 /* PolyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PolyTests.m; sourceTree = "<group>"; };
 		0CD1C1B91A5ADBF500416EED /* Polygone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Polygone.h; sourceTree = "<group>"; };
 		0CD1C1BA1A5ADBF500416EED /* Polygone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Polygone.m; sourceTree = "<group>"; };
+		0CD1C1BC1A5C08D500416EED /* PolygoneDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolygoneDrawer.h; sourceTree = "<group>"; };
+		0CD1C1BD1A5C08D500416EED /* PolygoneDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolygoneDrawer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 				0CACFD2E1A5AA2DB0080FB39 /* ViewController.m */,
 				0CD1C1B91A5ADBF500416EED /* Polygone.h */,
 				0CD1C1BA1A5ADBF500416EED /* Polygone.m */,
+				0CD1C1BC1A5C08D500416EED /* PolygoneDrawer.h */,
+				0CD1C1BD1A5C08D500416EED /* PolygoneDrawer.m */,
 				0CACFD301A5AA2DB0080FB39 /* Main.storyboard */,
 				0CACFD331A5AA2DB0080FB39 /* Images.xcassets */,
 				0CACFD351A5AA2DB0080FB39 /* LaunchScreen.xib */,
@@ -226,6 +231,7 @@
 			files = (
 				0CACFD2F1A5AA2DB0080FB39 /* ViewController.m in Sources */,
 				0CACFD2C1A5AA2DB0080FB39 /* AppDelegate.m in Sources */,
+				0CD1C1BE1A5C08D500416EED /* PolygoneDrawer.m in Sources */,
 				0CD1C1BB1A5ADBF500416EED /* Polygone.m in Sources */,
 				0CACFD291A5AA2DB0080FB39 /* main.m in Sources */,
 			);
