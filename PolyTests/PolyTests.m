@@ -65,7 +65,21 @@
     XCTAssert(p.edges == 5);
 }
 
+// Test initWithEdges:
+- (void) testConstructor
+{
+    int testValue = 4;
+    Polygone * p = [[Polygone alloc]initWithEdges:testValue];
+    XCTAssert(p.edges == testValue);
+}
 
+// Test initWithEdges:
+- (void) testConstructorWithOffLimit
+{
+    int testValue = 42;
+    Polygone * p = [[Polygone alloc]initWithEdges:testValue];
+    XCTAssert(p.edges == 5);
+}
 
 
 @end

@@ -37,6 +37,9 @@
                                 <rect key="frame" x="14" y="562" width="572" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.8980392157" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="maximumTrackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="handleSliderValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="UHr-mH-BJN"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" red="0.95876736111111116" green="0.13075810185185185" blue="0.1361111111111111" alpha="1" colorSpace="deviceRGB"/>
@@ -54,6 +57,11 @@
                             <constraint firstAttribute="centerX" secondItem="DP8-Ax-LNh" secondAttribute="centerX" constant="-0.5" id="zX6-tz-Unc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="polygoneDescriptionLabel" destination="kTx-Zo-Pt8" id="dYG-pz-kty"/>
+                        <outlet property="polygoneNameLabel" destination="DP8-Ax-LNh" id="8y5-2m-P29"/>
+                        <outlet property="slider" destination="2pH-n2-QTO" id="z5M-Ls-hOc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

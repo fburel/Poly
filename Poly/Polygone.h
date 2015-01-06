@@ -10,6 +10,9 @@
 
 @interface Polygone : NSObject
 
+/// Constructor
+- (instancetype)initWithEdges:(int)edges;
+
 /// Accessor for the number of edges
 @property (nonatomic) int edges;
 

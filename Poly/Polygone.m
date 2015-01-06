@@ -17,20 +17,37 @@
 
 @implementation Polygone
 
+bool OffLimit(edges)
+{
+    return edges < MINIMUM_NUMBER_OF_SIDE || edges > MAXIMUM_NUMBER_OF_SIDE;
+}
 
-- (instancetype)init
+
+- (instancetype)initWithEdges:(int)edges
 {
     self = [super init];
     if (self) {
-        _edges = DEFAULT_NUMBER_OF_SIDE;
+        if(OffLimit(edges))
+        {
+            self.edges = DEFAULT_NUMBER_OF_SIDE;
+        }
+        else
+        {
+            self.edges = edges;
+        }
     }
     return self;
+}
+
+- (instancetype)init
+{
+    return [self initWithEdges:DEFAULT_NUMBER_OF_SIDE];
 }
 
 
 - (void)setEdges:(int)edges
 {
-    if(edges < MINIMUM_NUMBER_OF_SIDE || edges > MAXIMUM_NUMBER_OF_SIDE)
+    if(OffLimit(edges))
     {
         // do nothing
     }
@@ -43,6 +60,6 @@
 
 - (NSString *)name
 {
-    return POLYGONE_NAMES[_edges - 3];
+    return POLYGONE_NAMES[self.edges - 3];
 }
 @end

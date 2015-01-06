@@ -7,26 +7,42 @@
 //
 
 #import "ViewController.h"
+#import "Polygone.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *polygoneNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *polygoneDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UISlider *slider;
+
+
+@property (nonatomic, /*readwrite, */strong) Polygone * polygone;
 
 @end
 
 @implementation ViewController
 
 
+- (void)updateUI {
+    self.polygoneNameLabel.text = self.polygone.name;
+    self.polygoneDescriptionLabel.text = [NSString stringWithFormat:@"Ce polygone à %d cotés", self.polygone.edges];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Instanciation du Polygone
+    self.polygone = [Polygone new];
     
-    // Do any additional setup after loading the view, typically from a nib.
-    
-       
+    // Mise a jour de l'UI
+    self.slider.value = self.polygone.edges;
+    [self updateUI];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)handleSliderValueChanged:(id)sender
+{
+    self.polygone.edges = self.slider.value;
+    [self updateUI];
 }
 
 @end
